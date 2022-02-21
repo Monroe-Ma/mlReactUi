@@ -1,7 +1,7 @@
 const path = require('path')
-// const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
-    // mode: 'production',
+    mode: 'production',
     entry: {
         index: './lib/index.tsx'
     },
@@ -14,14 +14,19 @@ module.exports = {
         rules: [
             {
                 test: /\.tsx?$/,
-                loader: 'ts-loader'
+            loader: 'ts-loader',
+                exclude: /node_modules/,
+                options: {
+            // configFile: './tsconfig.json', // !! WRONG
+              configFile: path.resolve('./tsconfig.json'),    // CORRECT
+    },
             }
         ]
     },
-    // plugins: [
-    //     new HtmlWebpackPlugin({
-    //         template: 'index.html'
-    //     })
-    // ]
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: 'index.html'
+        })
+    ]
 
 }
