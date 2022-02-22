@@ -1,11 +1,19 @@
 import * as  React from "react"
-
-
-function Button(){ 
+import { scopedClassMaker } from '../helper/classes';
+import "./button.scss"
+type Props = {
+  theme:string
+}
+const buttonName = scopedClassMaker("jb-button")
+const bn =buttonName
+const Button:React.FC<Props>=(props)=>{ 
   return (
-    <button>
+    <div>
+      <button className={bn("primary") } >
       
-   </button>
+      </button>
+      <button className={bn()} >{ props.children}</button>
+    </div>
   )
 }
 export default Button

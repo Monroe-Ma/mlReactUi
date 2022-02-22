@@ -1,0 +1,57 @@
+.jb-button {
+  width: auto;
+  height: 32px;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  background: #fff;
+  color: #333;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  padding: 0 10px;
+  cursor: pointer;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+  transition: background 250ms;
+}
+
+.jb-button + .jb-button {
+  margin-left: 8px;
+}
+
+.jb-button:hover,
+.jb-button :focus {
+  border: 1px solid #3577fe;
+  color: #3577fe;
+}
+
+.jb-button:focus {
+  outline: none;
+}
+
+.jb-button::-moz-focus-inner {
+  border: 0;
+}
+
+@keyframes joinbe-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.jb-button-primary {
+  border: transparent;
+  box-shadow: none;
+  background: red;
+  color: #fff;
+}
+
+.jb-button-primary:hover, .jb-button-primary:focus {
+  background: #6899fe;
+  border: transparent;
+  color: #fff;
+}
