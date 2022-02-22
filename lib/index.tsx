@@ -10,7 +10,7 @@ ReactDOM.render
 <div>
     <IconExample />
     <DialogExample />
-    <ButtonExample></ButtonExample>
+    <ButtonExample />
   </div>,
   
   document.querySelector("#root"))

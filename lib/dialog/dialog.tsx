@@ -1,11 +1,14 @@
-import React, { Fragment } from "react"
+import React, { Fragment, ReactElement } from "react"
 import "./dialog.scss"
 import {scopedClassMaker } from "../helper/classes"
 import Icon from '../icon/Icon';
 import  "../index.scss"
+import { ButtonHTMLAttributes } from "react";
   type Props = {
     visible: boolean
     // onClick:()=>void
+    buttons: Array<ReactElement> 
+    onClose:()=>void
   }
 
 const scopedClass = scopedClassMaker("jb-dialog")
@@ -23,12 +26,10 @@ const Dialog:React.FC<Props> = (props) => {
             <div className={sc("close")}>
               <Icon name="guanbi" className="dialogClose" />
             </div>
-           
             </span>
           <main className={sc("main")}> {props.children }</main>
           <footer className={sc("footer")}>
-            <button>1</button>
-            <button>2</button>
+            {props.buttons }
           </footer>
        
         </div>
