@@ -1,7 +1,7 @@
 import * as renderer from 'react-test-renderer';
 import * as React from 'react'
 
-import  Button from '../Button/Button';
+import  Button from '../button/button';
 
 describe('button', () => {
   it('是个 div', () => {

@@ -1,0 +1,7 @@
+[class^='jb-'] {
+  box-sizing: border-box;
+  &::after,
+  &::before {
+    box-sizing: border-box;
+  }
+}
