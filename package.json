@@ -24,6 +24,7 @@
     "@babel/preset-env": "^7.3.4",
     "@babel/preset-react": "^7.0.0",
     "@types/jest": "^24.0.9",
+    "@types/jquery": "^3.5.13",
     "@types/mocha": "^9.1.0",
     "@types/react-dom": "^16.8.1",
     "@types/react-test-renderer": "16.8.1",
