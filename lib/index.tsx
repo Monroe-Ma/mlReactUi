@@ -1,11 +1,10 @@
 import React from "react"
-import ReactDOM  from "react-dom"
-import Icon from './icon/Icon';
+import ReactDOM from "react-dom";
+import IconExample from "./icon/icon.example";
 import './icon/importIcon'
 ReactDOM.render(
 <div>
-  <Icon name="AccountBook-g"  />
-  <Icon name="Analysis"/>
+  <IconExample/>
   </div>,
   
   document.querySelector("#root"))
