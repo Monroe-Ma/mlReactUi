@@ -1,7 +1,7 @@
 import React from "react"
 import "./icons/AccountBook-g.svg"
 import "./icon.scss"
-import classes from './helper/classes';
+import classes from '../helper/classes';
 interface IconProps extends React.SVGAttributes<SVGElement> {
   name: string;
 }
@@ -12,7 +12,6 @@ const  Icon:React.FC<IconProps>=({className, name, ...restProps}) =>{
     >
         <use xlinkHref={`#${name}`} ></use>
       </svg>
-     
 )
 }
 export default Icon
