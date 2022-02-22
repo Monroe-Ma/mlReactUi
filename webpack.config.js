@@ -15,12 +15,20 @@ module.exports = {
         rules: [
             {
                 test: /\.tsx?$/,
-            loader: 'ts-loader',
+                loader: 'ts-loader',
                 exclude: /node_modules/,
                 options: {
-              configFile: path.resolve('./tsconfig.json'), 
-    },
-            }
+                    configFile: path.resolve('./tsconfig.json'),
+                }
+            },
+            {
+                test: /\.svg?$/,
+                loader:"svg-sprite-loader"
+            },
+            {
+                 test: /\.scss$/,
+                 use: ['style-loader', 'css-loader', 'sass-loader']
+      }
         ]
     },
 }

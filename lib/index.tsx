@@ -1,4 +1,11 @@
 import React from "react"
-import ReactDOM, { render } from "react-dom"
-import Button from "./Button"
-ReactDOM.render(<Button></Button>,document.body)
+import ReactDOM  from "react-dom"
+import Icon from './Icon';
+import './importIcon'
+ReactDOM.render(
+<div>
+  <Icon name="AccountBook-g"  />
+   <Icon name="Analysis"/>
+  </div>,
+  
+  document.querySelector("#root"))
