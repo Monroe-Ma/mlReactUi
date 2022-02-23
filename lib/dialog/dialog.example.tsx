@@ -8,22 +8,23 @@ const[visible,setVisible]=useState(false)
 
   return <div>
     <h1>对话框</h1>
-    {/* <Button theme="jb-button" onClick={() => { setVisible(!visible)} } >我是对话框</Button> */}
     <Button
       theme="jb-button"
       onClick={() => {
-        console.log("11111111")
         setVisible(!visible)
       }}
     >我是对话框</Button>
     <Dialog visible={visible}
-            buttons={[
-              <Button theme="jb-button">取消</Button>,
-              <Button theme="jb-button-primary">确认</Button>
+           buttons={[
+             <Button onClick={() => {  setVisible(!visible)}}
+                     theme="jb-button">取消</Button>,
+             <Button theme="jb-button-primary"
+                     onClick={() => { setVisible(!visible)}}
+             >确认</Button>
             ]}
-            onClose={() => { } }
+            onClose={() => {setVisible(!visible) } }
             
-    >111</Dialog>
+    >some</Dialog>
   </div>
   
 }
