@@ -9,12 +9,14 @@ type Props = {
  const ly = layoutName
  const Layout: React.FC<Props> = (props) => {
  const {className, ...rest} = props;
- const children = props.children as Array<ReactElement>;
- const hasAside = 'length' in children &&
+  const children = props.children as Array<ReactElement>;
+  const hasAside = 'length' in children &&
     children.reduce((result, node) => result || node.type === Aside, false);
-
+   console.log(ly({ '': true, hasAside }, { extra: className }))
+   console.log({...rest})
   return <Fragment>
-    <div className={[ly(),className,hasAside].join(" ")} {...rest}>
+    <div className={ly({ '': true, hasAside }, { extra: className })} {...rest}>
+    {/* {console.log(props.children)} */}
       {props.children}
       </div>
    

@@ -15,8 +15,6 @@
   flex-direction: column;
 }
 
-.jb-layout {
-  display: flex;
+.jb-layout .jb-layout {
   flex-grow: 1;
-  flex-direction: row;
 }

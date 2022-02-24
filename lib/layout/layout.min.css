@@ -1,1 +1,1 @@
-.jb-layout{display:flex;flex-direction:column}.jb-layout-content{flex-grow:1}.jb-layout-hasAside{flex-direction:row}.jb-layout-hasAside-layout{flex-direction:column}.jb-layout{display:flex;flex-grow:1;flex-direction:row}
+.jb-layout{display:flex;flex-direction:column}.jb-layout-content{flex-grow:1}.jb-layout-hasAside{flex-direction:row}.jb-layout-hasAside-layout{flex-direction:column}.jb-layout .jb-layout{flex-grow:1}

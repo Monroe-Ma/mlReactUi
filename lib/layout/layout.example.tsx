@@ -1,9 +1,5 @@
 import React, { Fragment } from "react"
-import Layout from './layout';
-import Header from './header';
-import Aside from './aside';
-import Content from "./content";
-import Footer from "./footer";
+import { Layout,Header,Aside, Content,Footer }from './layout';
 import "./layout.example.scss"
 const LayoutExample: React.FC = (props) => {
   return <Fragment>
@@ -33,8 +29,8 @@ const LayoutExample: React.FC = (props) => {
       <Footer className="x">Footer</Footer>
     </Layout>
   
-        <h4>我的第4个例子</h4>
-    <Layout style={{ height: 500, width: 500 }}>
+    <h4>我的第4个例子</h4>
+     <Layout style={{ height: 500, width: 500 }}>
      <Aside className="z" > Aside</Aside>
       <Layout>
          <Header className="x" >Header</Header>
