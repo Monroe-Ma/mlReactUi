@@ -1,0 +1,29 @@
+.jb-layout {
+  // border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  &-header {
+    // border: 1px solid green;
+  }
+
+  &-content {
+    // border: 1px solid blue;
+    flex-grow: 1;
+  }
+
+  &-aside {
+    // border: 1px solid rgb(7, 7, 7);
+  }
+
+  & & {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: row;
+  }
+  &-hasAside {
+    flex-direction: row;
+    &-layout {
+      flex-direction: column;
+    }
+  }
+}

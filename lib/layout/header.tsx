@@ -1,10 +1,14 @@
-import React, { Fragment } from "react"
+import React, { Fragment, HTMLAttributes } from "react"
+import { scopedClassMaker } from "../helper/classes"
 type Props = {
-  value:string
-}
-const  header: React.FC<Props> = (props) => {
-return <Fragment>
 
+} & HTMLAttributes<HTMLElement>
+ const layoutName = scopedClassMaker("jb-layout")
+const ly = layoutName
+const Header: React.FC<Props> = (props) => {
+   const { className, ...rest }=props
+return <Fragment>
+   <div className={[ly("header"),className].join(" ")} {...rest}>header</div>
   </Fragment>
 }
-export default header
+export default Header

@@ -1,10 +1,22 @@
-import React, { Fragment } from "react"
+import React, { Fragment, HTMLAttributes, ReactElement } from "react"
+import {scopedClassMaker } from '../helper/classes';
+import Aside from "./aside";
 type Props = {
-  value:string
-}
-const layout: React.FC<Props> = (props) => {
- return <Fragment>
+  children: ReactElement | Array<ReactElement>
+} & HTMLAttributes<HTMLElement>
+ const layoutName = scopedClassMaker("jb-layout")
+const ly = layoutName
+const Layout: React.FC<Props> = (props) => {
+  const {className, ...rest} = props;
+  const children = props.children as Array<ReactElement>;
+  const hasAside = 'length' in children &&
+    children.reduce((result, node) => result || node.type === Aside, false);
 
+  return <Fragment>
+    <div className={[ly(),className,hasAside].join(" ")} {...rest}>
+      {props.children}
+      </div>
+   
   </Fragment>
 }
-export default layout
+export default Layout

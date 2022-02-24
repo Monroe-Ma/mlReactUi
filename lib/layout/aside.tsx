@@ -1,10 +1,15 @@
-import React, { Fragment } from "react"
+import React, { Fragment, HTMLAttributes } from "react"
+import { scopedClassMaker } from "../helper/classes"
 type Props = {
-  value:string
-}
-const aside: React.FC<Props> = (props) => {
-  return <Fragment>
 
+} & HTMLAttributes<HTMLElement>
+ const layoutName = scopedClassMaker("jb-layout")
+const ly = layoutName
+const Aside: React.FC<Props> = (props) => {
+   const { className, ...rest }=props
+   return <Fragment>
+    <div className={[ly("aside"),className].join(" ")} {...rest} >aside</div>
+    
   </Fragment>
 }
-export default aside
+export default Aside
