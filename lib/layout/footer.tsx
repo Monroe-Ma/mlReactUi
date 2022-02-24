@@ -8,7 +8,7 @@ const ly = layoutName
 const Footer: React.FC<Props> = (props) => {
    const { className, ...rest }=props
 return <Fragment>
-<div className={[ly("footer"),className].join(" ")} {...rest}>footer</div>
+<div className={[ly("footer"),className].join(" ")} {...rest}> {props.children}</div>
   </Fragment>
 }
 export default Footer

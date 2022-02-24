@@ -8,7 +8,7 @@ const ly = layoutName
 const Header: React.FC<Props> = (props) => {
    const { className, ...rest }=props
 return <Fragment>
-   <div className={[ly("header"),className].join(" ")} {...rest}>header</div>
+   <div className={[ly("header"),className].join(" ")} {...rest}> {props.children}</div>
   </Fragment>
 }
 export default Header

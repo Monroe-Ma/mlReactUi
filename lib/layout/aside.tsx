@@ -8,7 +8,7 @@ const ly = layoutName
 const Aside: React.FC<Props> = (props) => {
    const { className, ...rest }=props
    return <Fragment>
-    <div className={[ly("aside"),className].join(" ")} {...rest} >aside</div>
+    <div className={[ly("aside"),className].join(" ")} {...rest} > {props.children}</div>
     
   </Fragment>
 }

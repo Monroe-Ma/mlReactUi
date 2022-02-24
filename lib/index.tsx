@@ -6,18 +6,20 @@ import DialogExample from "./dialog/dialog.example";
 import IconExample from "./icon/icon.example";
 import LayoutExample from "./layout/layout.example";
 import './icon/importIcon'
+import  { Header,Layout, Aside,Footer, Content} from "./layout/layout";
+
 ReactDOM.render
 (
 <Router>
-    <div>
-      <header>
+    <Layout>
+      <Header>
         <div className="logo">
           JUI
         </div>
 
-      </header>
-      <div>
-        <aside>
+      </Header>
+      <Layout>
+        <Aside>
           <h2>组件</h2>
           <ul>
             <li>
@@ -33,15 +35,16 @@ ReactDOM.render
               <Link to="/layout">布局</Link>
             </li>
           </ul>
-        </aside>
-        <main>
+        </Aside>
+        <Content>
           <Route path="/icon" component={IconExample}/>
           <Route path="/button" component={ButtonExample}/>
           <Route path="/dialog" component={DialogExample}/>
           <Route path="/layout" component={LayoutExample}/>
-        </main>
-      </div>
-    </div>
+        </Content>
+      </Layout>
+      <Footer></Footer>
+    </Layout>
   </Router>,
   
   document.querySelector("#root"))

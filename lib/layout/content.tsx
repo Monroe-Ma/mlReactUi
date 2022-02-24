@@ -8,7 +8,7 @@ const ly = layoutName
 const Content: React.FC<Props> = (props) => {
    const { className, ...rest }=props
   return <Fragment>
-     <div className={[ly("content"),className].join(" ")} {...rest}>content</div>
+     <div className={[ly("content"),className].join(" ")} {...rest}> {props.children}</div>
   </Fragment>
 }
 export default Content
