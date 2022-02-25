@@ -3,23 +3,23 @@ import ReactDOM from "react-dom";
 import {HashRouter as Router, Route, Link} from 'react-router-dom';
 import ButtonExample from "./button/button.example";
 import DialogExample from "./dialog/dialog.example";
-import IconExample from "./icon/icon.example";
 import LayoutExample from "./layout/layout.example";
 import './icon/importIcon'
 import  { Header,Layout, Aside,Footer, Content} from "./layout/layout";
+import IconDemo from "./icon/icon.demo";
 
 ReactDOM.render
 (
 <Router>
-    <Layout>
-      <Header>
+    <Layout className="site-page">
+      <Header className="site-header">
         <div className="logo">
           JUI
         </div>
 
       </Header>
       <Layout>
-        <Aside>
+        <Aside className="site-aside">
           <h2>组件</h2>
           <ul>
             <li>
@@ -36,14 +36,14 @@ ReactDOM.render
             </li>
           </ul>
         </Aside>
-        <Content>
-          <Route path="/icon" component={IconExample}/>
+        <Content className="site-main">
+          <Route path="/icon" component={IconDemo}/>
           <Route path="/button" component={ButtonExample}/>
           <Route path="/dialog" component={DialogExample}/>
           <Route path="/layout" component={LayoutExample}/>
         </Content>
       </Layout>
-      <Footer></Footer>
+      <Footer className="site-footer"></Footer>
     </Layout>
   </Router>,
   
