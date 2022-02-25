@@ -7,18 +7,16 @@ type Props = {
 } & HTMLAttributes<HTMLElement>
  const layoutName = scopedClassMaker("jb-layout")
  const ly = layoutName
- const Layout: React.FC<Props> = (props) => {
- const {className, ...rest} = props;
+const Layout: React.FC<Props> = (props) => {
+  const { className, ...rest } = props;
   const children = props.children as Array<ReactElement>;
   const hasAside = 'length' in children &&
-    children.reduce((result, node) => result || node.type === Aside, false);
-   console.log(ly({ '': true, hasAside }, { extra: className }))
-   console.log({...rest})
+  children.reduce((result, node) => result || node.type === Aside, false);
+ 
   return <Fragment>
     <div className={ly({ '': true, hasAside }, { extra: className })} {...rest}>
-    {/* {console.log(props.children)} */}
       {props.children}
-      </div>
+    </div>
    
   </Fragment>
 }
@@ -30,4 +28,4 @@ export { default as Aside } from "./aside"
 export { default as Footer } from "./footer"
 
 
-
+ 

@@ -6,13 +6,13 @@ const ButtonExample = () => {
 const bn = buttonName
   return <div>
     <h4>基本按钮</h4>
-    <Button theme={bn()}>普通按钮</Button>
+    <Button theme={bn({ '': true })}>普通按钮</Button>
     <Button theme={bn("primary")}>颜色按钮</Button>
     <Button theme={bn("link")}>链接按钮</Button>
     <Button theme={bn("text")}>文字按钮</Button>
     <h4>按钮尺寸</h4>
     <Button size={bn("small")}>小按钮</Button>
-       <Button size={bn()}>普通按钮</Button>
+       <Button size={bn({ '': true })}>普通按钮</Button>
        <Button size={bn("big")}>大按钮</Button>
     <h2>按钮类型</h2>
      <Button level={bn("info")}>信息按钮</Button>

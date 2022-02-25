@@ -19,7 +19,7 @@ const Dialog: React.FC<Props> = (props) => {
     <Fragment>
       <div className={sc("mask")} onClick={props.onClose}>
       </div>
-      <div className={sc()}>
+      <div className={sc({ '': true })}>
         <span>
           <header className={sc("header")} >提示</header>
           <div className={sc("close")} onClick={props.onClose}>
