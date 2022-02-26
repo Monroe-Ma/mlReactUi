@@ -53,8 +53,11 @@ ReactDOM.render
           <Route path="/dialog" component={DialogExample}/>
           <Route path="/layout" component={LayoutExample}/>
         </Content>
+         
       </Layout>
-      <Footer className="site-footer"></Footer>
+      <Footer className="site-footer">
+       < Icon className="logoGrey" name="jui-grey"/>
+     </Footer>
     </Layout>
   </Router>,
   

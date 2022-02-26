@@ -110,6 +110,11 @@ body {
   color: #666;
   padding: 16px 0;
   border-top: 1px solid $border-color;
+  background-color: #34383b;
+  .logoGrey {
+    width: 100px;
+    height: 35px;
+  }
 }
 .example {
   padding: 16px 0;
