@@ -48,10 +48,43 @@ const bn = buttonName
      <Demo code={( require("!!raw-loader!./button.disable") ).default }>
         <ButtonDisable />
       </Demo>
-      </div>
-    {/* <h2>加载状态</h2>
-     <Button loading >加载中</Button>
-    <Button theme={bn("loadingIndicator") } loading>加载完成</Button> */}
-</div>
+    </div>
+    <div className="jb-anchor">
+       <h2>API</h2>
+    </div>
+    <table className="jb-table">
+      <thead className="jb-thead">
+        <tr>
+          <th>参数</th>
+          <th>说明</th>
+          <th>类型</th>
+          <th>默认值</th>
+        </tr>
+      </thead>
+      <tbody className="jb-tbody">
+        <tr>
+          <td>className</td>  
+          <td>设置图标的样式名</td>  
+          <td>string</td>
+          <td>-</td>  
+        </tr>
+         <tr>
+          <td>style</td>  
+          <td>设置图标的样式，例如 fontSize 和 color</td>  
+          <td>CSSProperties</td>
+          <td>-</td>  
+        </tr>
+        <tr>
+          <td>fill</td>  
+          <td>设置图标的yanse</td>  
+          <td>string</td>
+          <td>-</td>  
+        </tr>
+      </tbody>
+    </table>
+
+
+  </div>
+  
 }
 export default ButtonExample 

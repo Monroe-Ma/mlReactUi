@@ -7,7 +7,9 @@ import Button from '../Button/button';
   type Props = {
     visible: boolean
     buttons?: Array<ReactElement> 
-    onClose?:()=>void
+    onClose?: () => void
+    title: string
+   
   }
 
 const scopedClass = scopedClassMaker("jb-dialog")
@@ -20,7 +22,7 @@ const Dialog: React.FC<Props> = (props) => {
       </div>
       <div className={sc({ '': true })}>
         <span>
-          <header className={sc("header")} >提示</header>
+          <header className={sc("header")} >{props.title }</header>
           <div className={sc("close")} onClick={props.onClose}>
             <Icon name="guanbi" className="dialogClose" />
           </div>
@@ -43,7 +45,7 @@ const model = (content: ReactNode,buttons?:Array<ReactElement>,afterClose?:()=>v
     ReactDOM.render(React.cloneElement(component, { visible: false }), div);
     ReactDOM.unmountComponentAtNode(div)
     div.remove()}
-  const component = <Dialog visible={true}
+  const component = <Dialog visible={true} title="提示"
                             onClose={() => {onClose(); afterClose && afterClose()}}
                            buttons={ buttons} 
                     >{content}</Dialog>

@@ -7,7 +7,7 @@ const DialogKit = () => {
   return (
   <div>
    <Button theme="jb-button"   onClick={() => { setVisible(!visible)}} >我是对话框</Button>
-   <Dialog visible={visible}
+   <Dialog title="提示"  visible={visible}
            buttons={[
              <Button onClick={() => {  setVisible(!visible)}}
                      theme="jb-button">取消</Button>,
