@@ -43,15 +43,10 @@ const model = (content: ReactNode,buttons?:Array<ReactElement>,afterClose?:()=>v
     ReactDOM.render(React.cloneElement(component, { visible: false }), div);
     ReactDOM.unmountComponentAtNode(div)
     div.remove()}
-    const component = <Dialog
-      visible={true}
-      onClose={() => {
-      onClose();
-      afterClose && afterClose()
-    }
-     }
-    buttons={ buttons} 
-  >{content}</Dialog>
+  const component = <Dialog visible={true}
+                            onClose={() => {onClose(); afterClose && afterClose()}}
+                           buttons={ buttons} 
+                    >{content}</Dialog>
   
   const div = document.createElement("div")
   document.body.append(div)
@@ -63,6 +58,7 @@ const alert = (content: string) => {
   const buttons = [<Button onClick={() => {close() }} theme="jb-button" >OK</Button>]
   const close = model(content,buttons)
 }  
+
 const confirm = (content: string, yes: () => void, no: () => void) => {
   const onYes =()=> {
     close()
