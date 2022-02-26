@@ -9,7 +9,7 @@ type Props = {
   level?: string
   disabled?: boolean
   loading?: boolean
-  // className?:string
+  className?:string
   onClick?:() => void
 } & React.HTMLAttributes<HTMLButtonElement>
 const Button: React.FC<Props> = (props) => { 
@@ -18,7 +18,7 @@ const Button: React.FC<Props> = (props) => {
    const {className, theme,size,level, children, ...otherProps } = props;
   return (
   <Fragment>
-      <button className={bn({'': true}, { extra: className })}
+      <button className={bn({'':true},{extra: className })}
         {...otherProps}  >
         {props.children}</button>
     </Fragment>

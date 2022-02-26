@@ -109,6 +109,11 @@ $error-color: #ff0000;
     background: $write;
     color: $font-color;
     padding: 0 8px;
+    &:hover,
+    :focus {
+      border: 1px solid $hover-color;
+      color: $hover-color;
+    }
   }
 
   &-big {
@@ -120,6 +125,11 @@ $error-color: #ff0000;
     border: 1px solid $border-color;
     background: $write;
     color: $font-color;
+    &:hover,
+    :focus {
+      border: 1px solid $hover-color;
+      color: $hover-color;
+    }
   }
   &-info {
     padding: 0 10px;
