@@ -1,12 +1,12 @@
 import React from "react"
 import Demo from "../Demo"
 import IconExample from './icon.example';
+import IconShow1 from "./icon.SideShow";
 
-// const x =
 const IconDemo =() => {
   return (
-    <Demo code={( require("!!raw-loader!./icon.example.tsx") ).default }>
-      <IconExample/>
+    <Demo code={( require("!!raw-loader!./icon.show1") ).default }>
+     <IconShow1 />
     </Demo>)
  }
 export default IconDemo 

@@ -1,0 +1,21 @@
+.jb-title {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+.jb-anchor {
+  margin-bottom: 10px;
+  h2 {
+    font-size: 20px;
+    font-weight: 400;
+    color: rgb(71, 102, 130);
+  }
+}
+.jb-example {
+  margin-bottom: 10px;
+  border: 1px solid #eee;
+  padding: 20px;
+  margin: 20px;
+  > .view {
+    margin: 20px;
+  }
+}

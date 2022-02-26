@@ -11,7 +11,11 @@ const DialogExample = () => {
   )
    }
   return <div>
-    <h1>对话框</h1>
+     <h1 className="jb-title">对话框</h1>
+    <div className="jb-anchor">
+       <h2>组件式使用</h2>
+    </div>
+      <div className="jb-example">
     <Button
       theme="jb-button"
       onClick={() => {
@@ -28,8 +32,12 @@ const DialogExample = () => {
             ]}
             onClose={() => {setVisible(!visible) } }
             
-    >some</Dialog>
-    <h4>命令式使用</h4>
+      >some</Dialog>
+      </div>
+     <div className="jb-anchor">
+       <h2>命令式使用</h2>
+    </div>
+ <div className="jb-example">
     <Button theme="jb-button-primary"
              onClick={() => { alert("弹窗") }}
     >alert</Button >
@@ -43,7 +51,7 @@ const DialogExample = () => {
       } >confirm</Button >
 
      <Button theme="jb-button-primary" onClick={openModal}>model</Button >
-
+</div>
   </div>
   
 }

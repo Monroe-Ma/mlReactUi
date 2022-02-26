@@ -2,7 +2,6 @@ import React, { Fragment, ReactElement, ReactNode } from "react"
 import "./dialog.scss"
 import {scopedClassMaker } from "../helper/classes"
 import Icon from '../icon/Icon';
-import  "../index.scss"
 import ReactDOM from "react-dom";
 import Button from '../Button/button';
   type Props = {

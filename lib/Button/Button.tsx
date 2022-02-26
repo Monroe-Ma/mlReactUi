@@ -1,7 +1,6 @@
 import * as  React from "react"
-import { ButtonHTMLAttributes } from "react";
+import {scopedClassMaker } from '../helper/classes';
 import { Fragment } from "react"
-import {classes } from '../helper/classes';
 import "./button.scss"
 
 type Props = {
@@ -10,14 +9,16 @@ type Props = {
   level?: string
   disabled?: boolean
   loading?: boolean
+  // className?:string
   onClick?:() => void
-} 
+} & React.HTMLAttributes<HTMLButtonElement>
 const Button: React.FC<Props> = (props) => { 
-  const { theme,size,level, children, ...otherProps } = props;
+   const buttonName = scopedClassMaker("jb-button")
+   const bn = buttonName
+   const {className, theme,size,level, children, ...otherProps } = props;
   return (
   <Fragment>
-      <button
-        className={classes(theme, size, level)}
+      <button className={bn({'': true}, { extra: className })}
         {...otherProps}  >
         {props.children}</button>
     </Fragment>

@@ -6,17 +6,28 @@ import DialogExample from "./lib/dialog/dialog.example";
 import LayoutExample from "./lib/layout/layout.example";
 import './lib/icon/importIcon'
 import  { Header,Layout, Aside,Footer, Content} from "./lib/layout/layout";
-import IconDemo from "./lib/icon/icon.demo";
-
+import "./example.scss"
+import Icon from './lib/icon/Icon';
+import IconExample from "./lib/icon/icon.example";
 ReactDOM.render
 (
 <Router>
     <Layout className="site-page">
       <Header className="site-header">
         <div className="logo">
-          JUI
+          <Icon className="iconLogo" name="JUI-KIT" />
         </div>
-
+        <ul className="site-nav">
+          <li>
+            <Link to=" ">React版</Link>
+          </li>
+          <li>
+             <Link to=" ">VUE版</Link>
+          </li>
+          <li>
+            <Link to=" "> <Icon className="" name="githu" /> </Link>
+           </li>
+        </ul>
       </Header>
       <Layout>
         <Aside className="site-aside">
@@ -37,7 +48,7 @@ ReactDOM.render
           </ul>
         </Aside>
         <Content className="site-main">
-          <Route path="/icon" component={IconDemo}/>
+          <Route path="/icon" component={IconExample}/>
           <Route path="/button" component={ButtonExample}/>
           <Route path="/dialog" component={DialogExample}/>
           <Route path="/layout" component={LayoutExample}/>

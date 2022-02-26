@@ -3,14 +3,24 @@ import { Layout,Header,Aside, Content,Footer }from './layout';
 import "./layout.example.scss"
 const LayoutExample: React.FC = (props) => {
   return <Fragment>
-    <h4>我的第一个例子</h4>
+    <h1 className="jb-title">布局示例</h1>
+    
+    <div className="jb-anchor">
+       <h2>上中下布局</h2>
+    </div>
+
+     <div className="jb-example">
     <Layout style={{ height: 500, width: 500 }} >
       <Header className="x" >Header</Header>
       <Content className="y">Content</Content>
       <Footer className="x">Footer</Footer>
     </Layout>
-
-    <h4>我的第二个例子</h4>
+    </div>
+    
+     <div className="jb-anchor">
+      <h2>上左中右下布局</h2>
+    </div>
+    <div className="jb-example">
     <Layout style={{ height: 500, width: 500 }}>
       <Header className="x" >Header</Header>
       <Layout>
@@ -18,8 +28,12 @@ const LayoutExample: React.FC = (props) => {
         <Content className="y">Content</Content>
       </Layout>
       <Footer className="x">Footer</Footer>
-    </Layout>
-    <h4>我的第三个例子</h4>
+      </Layout>
+    </div>
+    <div className="jb-anchor">
+      <h2>上右中左下布局</h2>
+    </div>
+     <div className="jb-example">
     <Layout style={{ height: 500, width: 500 }}>
       <Header className="x" >Header</Header>
       <Layout>
@@ -28,17 +42,21 @@ const LayoutExample: React.FC = (props) => {
       </Layout>
       <Footer className="x">Footer</Footer>
     </Layout>
-  
-    <h4>我的第4个例子</h4>
+    </div>
+    <div className="jb-anchor">
+      <h2>左上中下</h2>
+    </div>
+     <div className="jb-example">
      <Layout style={{ height: 500, width: 500 }}>
      <Aside className="z" > Aside</Aside>
       <Layout>
          <Header className="x" >Header</Header>
          <Content className="y">Content</Content>
          <Footer className="x">Footer</Footer>
-      </Layout>
+        </Layout>
+  
     </Layout>
-
+      </div>
   
 
 

@@ -35,6 +35,8 @@ a {
 }
 pre {
   font-family: 'Fira Code Medium', Consolas, monospace;
+  padding: 20px;
+  margin-top: 10px;
 }
 $padding: 16px;
 $main-color: #00adb5;
@@ -48,23 +50,34 @@ body {
 }
 .site-main {
   padding-top: 16px;
+  margin-right: 16px;
 }
 .site-header {
-  background: $border-color;
-  padding: 8px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 13px 0;
+  border: 1px solid #eee;
   .logo {
     padding: 0 $padding;
     display: flex;
     align-items: center;
-    > img {
-      margin-right: 8px;
+    .iconLogo {
+      width: 120px;
+      height: 27px;
     }
-    > span {
-      color: $main-color;
-      font-size: 32px;
+  }
+  .site-nav {
+    display: flex;
+    flex-direction: row;
+    margin-right: 16px;
+    align-items: center;
+    > li {
+      margin-left: 30px;
     }
   }
 }
+
 .site-aside {
   border-right: 1px solid #eeeeee;
   margin-right: 16px;
@@ -80,11 +93,12 @@ body {
         display: block;
         padding: 8px $padding;
         &:hover {
-          color: $main-color;
+          background: #e5fcff;
+          color: #129dac;
         }
         &.active {
-          color: white;
-          background: $main-color;
+          background: #e5fcff;
+          color: #129dac;
         }
       }
     }
