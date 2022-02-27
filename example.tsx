@@ -2,13 +2,13 @@ import React from "react"
 import ReactDOM from "react-dom";
 import {HashRouter as Router, Route, Link} from 'react-router-dom';
 import ButtonExample from "./lib/button/ButtonExample";
-import DialogExample from "./lib/dialog/dialog.example";
-import LayoutExample from "./lib/layout/layout.example";
+import DialogExample from "./lib/dialog/DialogExample";
+import LayoutExample from "./lib/layout/LayoutExample";
 import './lib/icon/importIcon'
-import  { Header,Layout, Aside,Footer, Content} from "./lib/layout/layout";
+import  { Header,Layout, Aside,Footer, Content} from "./lib/layout/Layout";
 import "./example.scss"
 import Icon from './lib/icon/Icon';
-import IconExample from "./lib/icon/icon.example";
+import IconExample from "./lib/icon/IconExample";
 ReactDOM.render
 (
 <Router>
