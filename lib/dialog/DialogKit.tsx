@@ -1,18 +1,18 @@
 import React, { useState } from "react"
-import Button from "../button/button";
-import Dialog from "./dialog";
+import Button from "../button/Button";
+import Dialog from "./Dialog";
 
 const DialogKit = () => {
   const [visible, setVisible] = useState(false)
   return (
   <div>
-   <button    onClick={() => { setVisible(!visible)}} >我是对话框</button>
+   <Button  theme="primary"  onClick={() => { setVisible(!visible)}} >我是对话框</Button>
    <Dialog title="提示"  visible={visible}
            buttons={[
-             <button onClick={() => {  setVisible(!visible)}}
-                     >取消</button>,
-             <button 
-                     onClick={() => { setVisible(!visible)}}>确认</button>
+             <Button theme="text" onClick={() => {  setVisible(!visible)}}
+                     >取消</Button>,
+             <Button theme="primary"
+                     onClick={() => { setVisible(!visible)}}>确认</Button>
                    ]}
            onClose={() => {setVisible(!visible) } }
             

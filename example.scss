@@ -96,10 +96,11 @@ body {
           background: #e5fcff;
           color: #129dac;
         }
-        &:active {
-          background: #e5fcff;
-          color: #129dac;
-        }
+      }
+      .activeStyle {
+        background: #e5fcff;
+        color: #129dac;
+        border-left: 4px solid #00e5ff;
       }
     }
   }

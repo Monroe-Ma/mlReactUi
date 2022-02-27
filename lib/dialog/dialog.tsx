@@ -3,7 +3,7 @@ import "./dialog.scss"
 import {scopedClassMaker } from "../helper/classes"
 import Icon from '../icon/Icon';
 import ReactDOM from "react-dom";
-import Button from '../Button/button';
+import Button from '../button/Button';
   type Props = {
     visible: boolean
     buttons?: Array<ReactElement> 
@@ -57,7 +57,7 @@ const model = (content: ReactNode,buttons?:Array<ReactElement>,afterClose?:()=>v
 }
 
 const alert = (content: string) => { 
-  const buttons = [<Button onClick={() => {close() }} theme="jb-button" >OK</Button>]
+  const buttons = [<Button onClick={() => {close() }} theme="ordinary" >OK</Button>]
   const close = model(content,buttons)
 }  
 
@@ -71,10 +71,10 @@ const confirm = (content: string, yes: () => void, no: () => void) => {
     no&&no()
    }
    const buttons =[
-      <button 
-              onClick={onYes}>yes</button>,
-      <button 
-              onClick={onNo}>no</button>
+      <Button theme="primary"
+              onClick={onYes}>yes</Button>,
+      <Button theme="text"
+              onClick={onNo}>no</Button>
     ]
    const close = model(content,buttons ,no)
  }

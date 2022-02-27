@@ -1,27 +1,27 @@
 import React, { useState } from "react"
-import Button from "../button/button";
-import  {alert,confirm,model } from "./dialog"
+import Button from "../button/Button";
+import  {alert,confirm,model } from "./Dialog"
 
 const DialogSodu = () => {
   const openModal = () => {
     const close = model(
-      <h1>你好 <button onClick={() => {close() }} >close</button></h1>
+      <h1>你好 <Button theme="ordinary" onClick={() => {close() }} >close</Button></h1>
       )
    }
   return (
   <div>
-    <button 
+    <Button theme="primary"
              onClick={() => { alert("弹窗") }}
-    >alert</button >
+    >alert</Button >
 
-    <button 
+    <Button theme="primary"
         onClick={() => {
           confirm("弹窗", () => { console.log("你点击了yes") },
                          () => { console.log("你点击了no"); })}
                }
-      >confirm</button >
+      >confirm</Button >
 
-     <button  onClick={openModal}>model</button >
+     <Button  theme="primary" onClick={openModal}>model</Button >
   </div>
   )
 }

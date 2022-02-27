@@ -14,7 +14,7 @@ type Props = {
   children.reduce((result, node) => result || node.type === Aside, false);
  
   return <Fragment>
-    <div className={ly({ '': true, hasAside }, { extra: className })} {...rest}>
+    <div className={ly({'': true, hasAside }, { extra: className })} {...rest}>
       {props.children}
     </div>
   </Fragment>
