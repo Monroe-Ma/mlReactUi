@@ -9,7 +9,6 @@ interface Props {
 
 const Demo: React.FunctionComponent<Props> = (props) => {
   const [codeVisible, setCodeVisible] = useState(false)
-  
   const code =(      <Highlight {...defaultProps} code={props.code} language="jsx">
       {({className, style, tokens, getLineProps, getTokenProps}) => (
         <pre className={className} style={style}>
@@ -28,12 +27,11 @@ const Demo: React.FunctionComponent<Props> = (props) => {
     <div className="example">
       <div>
         {props.children}
-     </div>
-      <Button theme="primary" onClick={() => setCodeVisible(!codeVisible)} >查看代码</Button>
+      </div>
+      <span></span>
+      <Button className='view' theme="ordinary" onClick={() => setCodeVisible(!codeVisible)} >查看代码</Button>
       {codeVisible&&code }
       </div>
-      
-
   );
 };
 

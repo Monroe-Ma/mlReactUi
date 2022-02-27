@@ -3,17 +3,23 @@
   background: #4285f4;
   margin: 4px 0;
   color: white;
+  padding-left: 10px;
+  padding-top: 10px;
 }
 .y {
   background: lighten(#69a2ff, 5%);
   margin: 4px 0;
   color: white;
+  padding-left: 10px;
+  padding-top: 10px;
 }
 .z {
   background: #34a853;
   width: 100px;
   margin: 4px 0;
   color: white;
+  padding-left: 10px;
+  padding-top: 10px;
 }
 .z + .y,
 .y + .z,

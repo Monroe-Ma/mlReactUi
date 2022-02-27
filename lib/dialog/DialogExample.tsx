@@ -4,8 +4,6 @@ import DialogKit from "./DialogKit";
 import DialogSodu from "./DialogSodu";
 
 const DialogExample = () => { 
-
-
   return <div>
     <h1 className="jb-title">对话框</h1>
     
