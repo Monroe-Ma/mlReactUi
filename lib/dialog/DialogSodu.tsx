@@ -5,23 +5,23 @@ import  {alert,confirm,model } from "./dialog"
 const DialogSodu = () => {
   const openModal = () => {
     const close = model(
-      <h1>你好 <Button onClick={() => {close() }} theme="jb-button">close</Button></h1>
+      <h1>你好 <button onClick={() => {close() }} >close</button></h1>
       )
    }
   return (
   <div>
-    <Button theme="jb-button-primary"
+    <button 
              onClick={() => { alert("弹窗") }}
-    >alert</Button >
+    >alert</button >
 
-    <Button theme="jb-button-primary"
+    <button 
         onClick={() => {
           confirm("弹窗", () => { console.log("你点击了yes") },
                          () => { console.log("你点击了no"); })}
                }
-      >confirm</Button >
+      >confirm</button >
 
-     <Button theme="jb-button-primary" onClick={openModal}>model</Button >
+     <button  onClick={openModal}>model</button >
   </div>
   )
 }

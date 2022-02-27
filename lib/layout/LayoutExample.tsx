@@ -14,7 +14,7 @@ const LayoutExample: React.FC = (props) => {
        <h2>上中下布局</h2>
     </div>
      <div className="jb-example">
-      <Demo code={( require("!!raw-loader!./layout.up") ).default }>
+      <Demo code={( require("!!raw-loader!./LayoutUp") ).default }>
         <LayoutUp />
       </Demo>
     </div>
@@ -23,7 +23,7 @@ const LayoutExample: React.FC = (props) => {
       <h2>上左中右下布局</h2>
     </div>
     <div className="jb-example">
-      <Demo code={( require("!!raw-loader!./layout.left") ).default }>
+      <Demo code={( require("!!raw-loader!./LayoutLeft") ).default }>
         <LayoutLeft />
       </Demo>
     </div>
@@ -32,7 +32,7 @@ const LayoutExample: React.FC = (props) => {
       <h2>上右中左下布局</h2>
     </div>
      <div className="jb-example">
-      <Demo code={( require("!!raw-loader!./layout.right") ).default }>
+      <Demo code={( require("!!raw-loader!./LayoutRight") ).default }>
         <LayoutRight />
       </Demo>
     </div>
@@ -41,7 +41,7 @@ const LayoutExample: React.FC = (props) => {
       <h2>左上中下</h2>
     </div>
      <div className="jb-example">
-     <Demo code={( require("!!raw-loader!./layout.asideLeft") ).default }>
+     <Demo code={( require("!!raw-loader!./LayoutAsideLeft") ).default }>
         <AsideLeft />
       </Demo>
     </div>

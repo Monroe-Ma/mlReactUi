@@ -71,10 +71,10 @@ const confirm = (content: string, yes: () => void, no: () => void) => {
     no&&no()
    }
    const buttons =[
-      <Button theme="jb-button"
-              onClick={onYes}>yes</Button>,
-      <Button theme="jb-button-primary" 
-              onClick={onNo}>no</Button>
+      <button 
+              onClick={onYes}>yes</button>,
+      <button 
+              onClick={onNo}>no</button>
     ]
    const close = model(content,buttons ,no)
  }

@@ -29,7 +29,7 @@ const Demo: React.FunctionComponent<Props> = (props) => {
       <div>
         {props.children}
      </div>
-      <Button className='aaa' onClick={() => setCodeVisible(!codeVisible)} theme='jb-button-primary'>查看代码</Button>
+      <button className='aaa' onClick={() => setCodeVisible(!codeVisible)} >查看代码</button>
       {codeVisible&&code }
       </div>
       

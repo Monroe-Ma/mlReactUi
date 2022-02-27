@@ -1,7 +1,7 @@
 import React from "react"
 import Demo from "../Demo"
-import IconExample from './icon.example';
-import IconShow1 from "./icon.SideShow";
+import IconExample from './IconExample';
+import IconShow1 from "./IconSideShow";
 
 const IconDemo =() => {
   return (

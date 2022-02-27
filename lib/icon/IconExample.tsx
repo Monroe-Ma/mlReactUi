@@ -1,7 +1,7 @@
 import React from "react"
 import Demo from "../Demo"
-import IconSideShow from "./icon.SideShow"
-import IconColorShow from "./icon.Color"
+import IconSideShow from "./IconSideShow"
+import IconColorShow from "./IconColor"
 
 const IconExample = () => { 
   return <div>
@@ -11,7 +11,7 @@ const IconExample = () => {
        <h2>面性ICON</h2>
     </div>
     <div className="jb-example">
-      <Demo code={( require("!!raw-loader!./icon.SideShow") ).default }>
+      <Demo code={( require("!!raw-loader!./IconSideShow") ).default }>
         <IconSideShow />
       </Demo>
     </div>
@@ -20,7 +20,7 @@ const IconExample = () => {
        <h2>双色ICON</h2>
     </div>
       <div className="jb-example">
-          <Demo code={( require("!!raw-loader!./icon.Color") ).default }>
+          <Demo code={( require("!!raw-loader!./IconColor") ).default }>
         <IconColorShow />
       </Demo>
     </div>

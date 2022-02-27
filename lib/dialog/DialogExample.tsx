@@ -1,9 +1,7 @@
 import React from "react"
-import  {alert,confirm,model } from "./dialog"
-import Button from '../Button/button';
 import Demo from "../Demo";
-import DialogKit from "./Dialog.kit";
-import DialogSodu from "./Dialog.sodu";
+import DialogKit from "./DialogKit";
+import DialogSodu from "./DialogSodu";
 
 const DialogExample = () => { 
 
@@ -16,7 +14,7 @@ const DialogExample = () => {
     </div>
 
     <div className="jb-example">
-        <Demo code={( require("!!raw-loader!./Dialog.kit") ).default }>
+        <Demo code={( require("!!raw-loader!./DialogKit") ).default }>
         <DialogKit />
        </Demo>
     </div>
@@ -26,7 +24,7 @@ const DialogExample = () => {
     </div>
     <div className="jb-example">
       
-    <Demo code={( require("!!raw-loader!./Dialog.sodu") ).default }>
+    <Demo code={( require("!!raw-loader!./DialogSodu") ).default }>
         <DialogSodu />
     </Demo>
     </div>

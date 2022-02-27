@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layout,Header, Content,Footer, Aside }from './layout';
+import { Layout,Header, Content,Footer, Aside }from './Layout';
 const LayoutLeft = () => { 
   return (
     <div>

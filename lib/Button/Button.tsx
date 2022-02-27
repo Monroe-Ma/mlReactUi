@@ -19,9 +19,11 @@ const Button: React.FC<Props> = (props) => {
    const {className, theme, children, ...otherProps } = props;
   return (
   <Fragment>
-      <button className={bn(theme,{extra: className }) }
+      <Button theme={bn({ "": true })}
+              size={bn({ "": true })}
+              level={bn({ "": true })}
         {...otherProps}  >
-        {children}</button>
+        {children}</Button>
     </Fragment>
   )
 }

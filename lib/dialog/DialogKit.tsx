@@ -6,13 +6,13 @@ const DialogKit = () => {
   const [visible, setVisible] = useState(false)
   return (
   <div>
-   <Button theme="jb-button"   onClick={() => { setVisible(!visible)}} >我是对话框</Button>
+   <button    onClick={() => { setVisible(!visible)}} >我是对话框</button>
    <Dialog title="提示"  visible={visible}
            buttons={[
-             <Button onClick={() => {  setVisible(!visible)}}
-                     theme="jb-button">取消</Button>,
-             <Button theme="jb-button-primary"
-                     onClick={() => { setVisible(!visible)}}>确认</Button>
+             <button onClick={() => {  setVisible(!visible)}}
+                     >取消</button>,
+             <button 
+                     onClick={() => { setVisible(!visible)}}>确认</button>
                    ]}
            onClose={() => {setVisible(!visible) } }
             
