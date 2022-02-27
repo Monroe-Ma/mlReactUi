@@ -1,7 +1,7 @@
 import React from "react"
 import ReactDOM from "react-dom";
 import {HashRouter as Router, Route, Link} from 'react-router-dom';
-import ButtonExample from "./lib/button/button.example";
+import ButtonExample from "./lib/button/ButtonExample";
 import DialogExample from "./lib/dialog/dialog.example";
 import LayoutExample from "./lib/layout/layout.example";
 import './lib/icon/importIcon'

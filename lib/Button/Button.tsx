@@ -1,5 +1,5 @@
 import * as  React from "react"
-import {scopedClassMaker } from '../helper/classes';
+import {scopedClassMaker} from '../helper/classes';
 import { Fragment } from "react"
 import "./button.scss"
 
@@ -12,15 +12,16 @@ type Props = {
   className?:string
   onClick?:() => void
 } & React.HTMLAttributes<HTMLButtonElement>
+
 const Button: React.FC<Props> = (props) => { 
    const buttonName = scopedClassMaker("jb-button")
    const bn = buttonName
-   const {className, theme,size,level, children, ...otherProps } = props;
+   const {className, theme, children, ...otherProps } = props;
   return (
   <Fragment>
-      <button className={bn({'':true},{extra: className })}
+      <button className={bn(theme,{extra: className }) }
         {...otherProps}  >
-        {props.children}</button>
+        {children}</button>
     </Fragment>
   )
 }

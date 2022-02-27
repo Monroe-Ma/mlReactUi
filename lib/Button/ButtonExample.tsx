@@ -1,22 +1,18 @@
 import React from "react"
-import Button from "./button"
-import { scopedClassMaker } from '../helper/classes';
 import "../demo.scss"
 import Demo from "../Demo";
-import ButtonBasic from "./button.basic";
-import ButtonSize from "./button.size";
-import ButtonInfo from "./button.info";
-import ButtonDisable from "./button.disable";
+import ButtonBasic from "./ButtonBasic";
+import ButtonSize from "./ButtonSize";
+import ButtonInfo from "./ButtonInfo";
+import ButtonDisable from "./ButtonDisable";
 const ButtonExample = () => { 
-  const buttonName = scopedClassMaker("jb-button")
-const bn = buttonName
   return <div>
     <h1 className="jb-title">Button 示例</h1>
     <div className="jb-anchor">
        <h2>基本按钮</h2>
     </div>
     <div className="jb-example">
-      <Demo code={( require("!!raw-loader!./button.basic") ).default }>
+      <Demo code={( require("!!raw-loader!./ButtonBasic") ).default }>
         <ButtonBasic />
       </Demo>
     </div>
@@ -25,7 +21,7 @@ const bn = buttonName
        <h2>按钮尺寸</h2>
     </div>
     <div className="jb-example">
-      <Demo code={( require("!!raw-loader!./button.size") ).default }>
+      <Demo code={( require("!!raw-loader!./ButtonSize") ).default }>
         <ButtonSize />
       </Demo>
     </div>
@@ -35,7 +31,7 @@ const bn = buttonName
     </div>
   
     <div className="jb-example">
-      <Demo code={( require("!!raw-loader!./button.info") ).default }>
+      <Demo code={( require("!!raw-loader!./ButtonInfo") ).default }>
         <ButtonInfo />
       </Demo>
     </div>
@@ -45,7 +41,7 @@ const bn = buttonName
     </div>
 
   <div className="jb-example">
-     <Demo code={( require("!!raw-loader!./button.disable") ).default }>
+     <Demo code={( require("!!raw-loader!./ButtonDisable") ).default }>
         <ButtonDisable />
       </Demo>
     </div>
@@ -82,8 +78,6 @@ const bn = buttonName
         </tr>
       </tbody>
     </table>
-
-
   </div>
   
 }
