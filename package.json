@@ -1,5 +1,6 @@
 {
   "name": "mlReactUi",
+  "homepage":"https://github.com/Monroe-Ma/mlReactUi-website",
   "version": "1.0.0",
   "description": "",
   "main": "dist/lib/index",
